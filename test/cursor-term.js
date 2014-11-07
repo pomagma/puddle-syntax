@@ -15,9 +15,11 @@ mocha.suite('cursor-term', function () {
 
     var examples = [
         [CURSOR(x), {term: x, address: []}],
+        [x, {term: x, address: null}],
         [CURSOR(APP(x, y)), {term: APP(x, y), address: []}],
         [APP(CURSOR(x), y), {term: APP(x, y), address: [1]}],
         [APP(x, CURSOR(y)), {term: APP(x, y), address: [2]}],
+        [APP(x, y), {term: APP(x, y), address: null}],
     ];
 
     mocha.test('insertCursor', function () {

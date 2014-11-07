@@ -186,6 +186,7 @@ Examples:
     insertCursor(term, [2, 1]);      // -> LAMBDA(x, APP(CURSOR(x), x))
     insertCursor(term, [2, 2]);      // -> LAMBDA(x, APP(x, CURSOR(x)))
     removeCursor(APP(CURSOR(x), x))  // -> {term: APP(x, x), address: [1]}
+    removeCursor(APP(x, x))          // -> {term: APP(x, x), address: null}
 
 ### Module `syntax.cursor` <a name="cursor"/>
 
