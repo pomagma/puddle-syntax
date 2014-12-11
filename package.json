@@ -1,6 +1,6 @@
 {
   "name": "puddle-syntax",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Syntax tools for the Puddle coding environment",
   "main": "index.js",
   "dependencies": {
@@ -17,8 +17,9 @@
     "coverage": "istanbul check-coverage _mocha",
     "coveralls": "coveralls < ./coverage/lcov.info",
     "lint": "jshint .",
-    "mocha": "istanbul cover _mocha -- --timeout 60000",
-    "test": "npm run lint && npm run mocha && npm run coverage && npm run coveralls"
+    "istanbul": "istanbul cover _mocha -- --timeout 60000",
+    "mocha": "mocha test",
+    "test": "npm run lint && npm run mocha && npm run istanbul && npm run coverage && npm run coveralls"
   },
   "repository": {
     "type": "git",
